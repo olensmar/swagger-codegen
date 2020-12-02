@@ -5,4 +5,19 @@ servers:
 clientsV3:
   - foo
 serversV3:
-  - foo
+  - aspnetcore
+  - go-server
+  - inflector
+  - jaxrs-cxf
+  - jaxrs-cxf-cdi
+  - jaxrs-di
+  - jaxrs-jersey
+  - jaxrs-resteasy
+  - jaxrs-resteasy-eap
+  - jaxrs-spec
+  - kotlin-server
+  - micronaut
+  - nodejs-server
+  - python-flask
+  - scala-akka-http-server
+  - spring

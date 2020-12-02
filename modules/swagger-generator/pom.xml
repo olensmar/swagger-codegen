@@ -160,7 +160,7 @@
             <properties>
                 <HIDDEN_OPTIONS_DEFAULT_PATH>hiddenOptions.yaml</HIDDEN_OPTIONS_DEFAULT_PATH>
                 <JAVA_MEM>1024m</JAVA_MEM>
-                <HTTP_PORT>8080</HTTP_PORT>
+                <HTTP_PORT>8081</HTTP_PORT>
             </properties>
             <build>
                 <plugins>
@@ -266,7 +266,7 @@
                     <plugin>
                         <groupId>com.spotify</groupId>
                         <artifactId>dockerfile-maven-plugin</artifactId>
-                        <version>1.4.3</version>
+                        <version>1.4.13</version>
                         <executions>
                             <execution>
                                 <id>build</id>
@@ -274,7 +274,7 @@
                                     <goal>build</goal>
                                 </goals>
                                 <configuration>
-                                    <repository>swaggerapi/swagger-generator-v3</repository>
+                                    <repository>datawire/ambassador-swagger-generator-v3</repository>
                                     <tag>${docker-latest-tag}</tag>
                                     <buildArgs>
                                         <HIDDEN_OPTIONS_DEFAULT_PATH>${HIDDEN_OPTIONS_DEFAULT_PATH}</HIDDEN_OPTIONS_DEFAULT_PATH>
@@ -383,11 +383,16 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <dependency>
+            <groupId>io.datawire</groupId>
+            <artifactId>ambassador-swagger-codegen</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
     <properties>
         <java.security.policy>grantall.policy</java.security.policy>
         <dockerfile.tag.skip>true</dockerfile.tag.skip>
-        <docker-latest-tag>unstable</docker-latest-tag>
+        <docker-latest-tag>latest</docker-latest-tag>
         <maven-plugin-version>1.0.0</maven-plugin-version>
         <jetty-version>9.4.34.v20201102</jetty-version>
         <inflector-version>2.0.5</inflector-version>
