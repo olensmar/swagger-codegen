@@ -1,0 +1,9 @@
+---
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: ambassador-generator
+  namespace: ambassador
+spec:
+  prefix: /generator/
+  service: ambassador-generator
