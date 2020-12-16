@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ambassador-generator
+  namespace: ambassador
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: ambassador-generator
+  template:
+    metadata:
+      labels:
+        app: ambassador-generator
+    spec:
+      containers:
+        - image: docker.io/datawire/ambassador-swagger-generator-v3:latest
+          name: petstore
+          ports:
+            - containerPort: 8080
