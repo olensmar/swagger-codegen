@@ -19,14 +19,14 @@ spec:
           name: petstore
           ports:
             - name: http
-              containerPort: 81
+              containerPort: 8081
           env:
             - name: HIDDEN_OPTIONS_PATH
               value: "/hiddenOptions.yaml"
             - name: JAVA_MEM
               value: "512m"
             - name: HTTP_PORT
-              value: "81"
+              value: "8081"
           volumeMounts:
             - name: generators
               mountPath: /jetty_home/lib/shared
