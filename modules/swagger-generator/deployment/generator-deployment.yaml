@@ -30,6 +30,6 @@ spec:
           volumeMounts:
             - name: generators
               mountPath: /jetty_home/lib/shared
-          volumes:
-            - name: generators
-              emptyDir: { }
+      volumes:
+        - name: generators
+          emptyDir: { }
