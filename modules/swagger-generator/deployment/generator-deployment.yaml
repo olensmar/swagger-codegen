@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - image: docker.io/datawire/ambassador-swagger-generator-v3:latest
-          name: petstore
+          name: ambassador-generator
           ports:
             - name: http
               containerPort: 8081
